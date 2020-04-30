@@ -1,0 +1,37 @@
+<?php
+/**
+ * {{label}} Plugin Main File.
+ * 
+ * @package 	{{label}}
+ * @copyright 	{{copyright_year}} {{creator_name}}.
+ * @license 	{{license_url}}
+ * @link		{{creator_git_url}}
+ * 
+ * @wordpress-plugin	
+ * Plugin Name: {{label}}
+ * Plugin URI: {{creator_git_url}}
+ * Description: {{desc}}
+ * Version: {{version}}
+ * Author: {{creator_name}}
+ * Author URI: {{creator_url}}
+ * Text Domain: {{slug}}
+ * Domain Path: /languages
+ * License: {{license_label}}
+ * License URI: {{license_url}}
+ */
+
+// PREVENT DIRECT ACCESS
+if ( ! defined( 'WPINC' ) ) {
+	die;
+}
+
+// SET PLUGIN CONSTANTS
+define( '{{constant_prefix}}_VERSION', '{{version}}' );
+define( '{{constant_prefix}}_FILE', __FILE__ );
+define( '{{constant_prefix}}_DIR', plugin_dir_path( {{constant_prefix}}_FILE ) );
+define( '{{constant_prefix}}_URL', plugin_dir_url( {{constant_prefix}}_FILE ) );
+
+// LOAD PLUGIN BOOTSTRAP
+if ( is_readable( {{constant_prefix}}_DIR . '/inc/bootstrap.php' ) ) {
+	require_once {{constant_prefix}}_DIR . '/inc/bootstrap.php';
+}
