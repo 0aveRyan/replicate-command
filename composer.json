@@ -1,5 +1,5 @@
 {
-    "name": "pressnitro/replicate-command",
+    "name": "0averyan/replicate-command",
     "authors": [
         {
             "name": "David Ryan",
@@ -10,17 +10,10 @@
         {
             "type": "composer",
             "url": "https://satis.wpteamhub.com"
-        },
-        {
-            "type": "path",
-            "url": "../../replicator",
-            "options": {
-                "symlink": true
-            }
         }
     ],
     "require": {
-        "pressnitro/replicator": "dev-master"
+        "0averyan/replicator": "dev-master"
     },
     "require-dev": {
         "bluehost/wp-php-standards": "^1.0"
@@ -30,7 +23,7 @@
             "package.php"
         ],
         "psr-4": {
-            "PressNitro\\Replicate\\": "src/"
+            "DaveRyan\\Replicate\\": "src/"
         }
     }
 }
