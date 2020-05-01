@@ -1,8 +1,8 @@
 <?php
 
-namespace PressNitro\Replicate\Plugin;
+namespace Replicator\Base_Commands\Plugin;
 
-use \PressNitro\Replicator\Common;
+use \Replicator\Core\Common;
 use \WP_CLI;
 
 /**

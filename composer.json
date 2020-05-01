@@ -1,5 +1,6 @@
 {
     "name": "0averyan/replicate-command",
+    "version": "0.1.0",
     "authors": [
         {
             "name": "David Ryan",
@@ -10,6 +11,13 @@
         {
             "type": "composer",
             "url": "https://satis.wpteamhub.com"
+        },
+        {
+            "type": "path",
+            "url": "../../replicator",
+            "options": {
+                "symlink": true
+            }
         }
     ],
     "require": {
@@ -23,7 +31,7 @@
             "package.php"
         ],
         "psr-4": {
-            "DaveRyan\\Replicate\\": "src/"
+            "Replicator\\Base_Commands\\": "src/"
         }
     }
 }
