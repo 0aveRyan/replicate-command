@@ -19,8 +19,6 @@ class Command extends Common {
 	public function __invoke( $args, $assoc_args ) {
 		$this->initialConfig();
 		$this->commonPrompts( $args, $assoc_args );
-		// do any custom prompts here
-		// $this->setupStructure();
 
 		$this->runReplication();
 	}
@@ -37,10 +35,31 @@ class Command extends Common {
 		$this->templates = __DIR__ . '/templates';
 	}
 
+	/**
+	 * Allows modification of the generated composer.json and package.json files.
+	 * 
+	 * Files are written after this function fires.
+	 */
+	protected function modifyConfigFiles() {
+		$this->composer_data = array_merge( $this->composer_data, [
+			'autoload'	=> [
+				'psr-4' => [
+					$this->data['namespace_check'] . '\\\\' => 'src/'
+				]
+			]
+		]);
+	}
+
+	/**
+	 * Setup the structure of the Plugin.
+	 */
 	protected function setupStructure() {
+		$slug = $this->data['slug'];
 		$this->structure = [
-			"{$this->data['slug']}.php" => 'plugin.php',
-			'README.md'  				=> 'README.md',
+			'.editorconfig'		=> '.editorconfig',
+			'.gitignore'		=> '.editorconfig',
+			"{$slug}.php" 		=> 'plugin.php',
+			'README.md'  		=> 'README.md',
 		];
 	}
 }

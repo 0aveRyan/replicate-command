@@ -11,13 +11,6 @@
         {
             "type": "composer",
             "url": "https://satis.wpteamhub.com"
-        },
-        {
-            "type": "path",
-            "url": "../../replicator",
-            "options": {
-                "symlink": true
-            }
         }
     ],
     "require": {

@@ -45,17 +45,3 @@ foreach( $commands as $cmd => $class ) {
 		$namespace . $class . '\\Command' 
 	);
 }
-
-// WP_CLI::add_command( 'replicate install', '\\PressNitro\\Replicate\\Install' );
-// WP_CLI::add_command( 'replicate package', '\\PressNitro\\Replicate\\Package' );
-// WP_CLI::add_command(
-// 	'replicate playground',
-// 	$namespace . 'Playground\\Command'
-// );
-
-// WP_CLI::add_command(
-// 	'replicate plugin',
-// 	$namespace . 'Plugin\\Command'
-// );
-// WP_CLI::add_command( 'replicate setup', '\\PressCloud\\Replicate\\Setup' );
-// WP_CLI::add_command( 'replicate theme', '\\PressCloud\\Replicate\\Theme' );
